@@ -2,6 +2,13 @@
 
 int main(void)
 {
-	printf("Main running!\n");
-	ft_printf("");
+	char *s = "this is a string";
+	char c = 'X';
+
+	ft_printf("%s%c123", s, c);
+
+	printf("\n");
+
+	printf("%s%c123", s, c);
+
 }

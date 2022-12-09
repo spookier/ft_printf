@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 09:54:18 by acostin           #+#    #+#              #
-#    Updated: 2022/12/09 10:37:54 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/09 16:52:08 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,10 @@ CFLAGS = -Wall -Werror -Wextra
 
 
 # Mandatory files
-FILES = 	ft_printf.c \
+FILES = 	./ft_printf.c \
 			count_flags.c \
-
+			ft_putstr.c \
+			ft_putchar.c \
 
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)
@@ -33,6 +34,8 @@ $(NAME) :
 	$(CC) $(CFLAGS) -c $(FILES)
 	ar rc $(NAME) $(OBJ_FILES)
 	ranlib $(NAME)
+
+
 
 # Clean all object files created
 clean : 
