@@ -1,1 +1,1 @@
-### Recoding the famous C function: printf()
+### Recoding the famous C function printf()
