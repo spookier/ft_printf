@@ -2,13 +2,25 @@
 
 int main(void)
 {
-	char *s = "this is a string";
-	char c = 'X';
+	/*//char *s = "123";
+	//char c = 'X';
+	int a = 25;
 
-	ft_printf("%s%c123", s, c);
+
+	printf(" COUNT = %d", ft_printf("%d", a));
+	printf("\n");
+	printf(" COUNT = %d", printf("%d", a));
 
 	printf("\n");
-
-	printf("%s%c123", s, c);
+	*/
+	char	*c;
+	
+	c = (char *)malloc(sizeof(char) * 2);
+	c[0] = 0;
+	c[1] = 0;
+	printf("%s\n", c);
+	printf("%c\n", c[0]);
+	char *s = NULL;
+	printf("%s\n", s);
 
 }
