@@ -9,8 +9,7 @@ static void print_arg(char c, va_list args, int *count)
 		*count += ft_putstr(va_arg(args, char *));
 	else if (c == 'p')
 	{
-		ft_putstr("0x");
-		*count += 2 + ft_hexa(va_arg(args, unsigned long), 1);
+		*count += ft_putpointer_check(va_arg(args, unsigned long));
 	}
 	else if(c == 'd' || c == 'i')
 		*count += ft_putnbr(va_arg(args, int));

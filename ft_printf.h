@@ -15,5 +15,7 @@ int		count_flags(const char *str, char *flags);
 int 	print_all(va_list args, const char *str, int num_args);
 int		ft_putnbr(int nb);
 int		ft_hexa(unsigned long nb, int sign);
+int		ft_unsigned_int(unsigned int nb);
+int		ft_putpointer_check(unsigned long nb);
 
 #endif

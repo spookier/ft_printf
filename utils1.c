@@ -57,6 +57,7 @@ int	ft_hexa(unsigned long nb, int sign)
 	int	len;
 
 	len = 0;
+	
 	if (nb >= 16)
 		len += ft_hexa(nb / 16, sign);
 	if (nb % 16 < 10)

@@ -6,7 +6,7 @@ static int check_size(const char *str)
 	char *flags;
 
 	size = 0;
-	flags = "cspdiuxX";
+	flags = "cspdiuxX%";
 
 	size = count_flags(str, flags);
 	//printf("Number of arguments = %d\n", size);
