@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 09:54:18 by acostin           #+#    #+#              #
-#    Updated: 2022/12/14 01:07:23 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/14 01:26:08 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ CFLAGS = -Wall -Werror -Wextra
 FILES = 	./ft_printf.c \
 			print_all.c \
 			utils1.c \
+			utils2.c \
 
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)
@@ -51,8 +52,7 @@ re : fclean all
 
 # ----TEST-------- exec main test
 ex : 
-	make fclean && make all && clear && gcc main.c libftprintf.a -Wall -Werror -Wextra && ./a.out
-
+	make fclean && make all && clear && cc main.c libftprintf.a -Wall -Werror -Wextra && ./a.out
 
 
 .PHONY : all clean fclean re
