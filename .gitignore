@@ -1,5 +1,8 @@
-main.c
-*.o
-tester/
-.vscode/
 .gitignore
+.vscode
+tester/
+a.out
+main.c
+libft.a
+libftprintf.a
+*.o
