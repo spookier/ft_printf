@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   utils_hexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 08:18:10 by acostin           #+#    #+#             */
-/*   Updated: 2022/12/14 08:22:04 by acostin          ###   ########.fr       */
+/*   Created: 2022/12/14 08:17:38 by acostin           #+#    #+#             */
+/*   Updated: 2022/12/14 08:19:43 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incs/ft_printf.h"
+#include "../../incs/ft_printf.h"
 
-static int	check_size(const char *str)
+int	ft_hexa(unsigned long nb, int sign)
 {
-	int		size;
-	char	*flags;
+	int	len;
 
-	size = 0;
-	flags = "cspdiuxX%";
-	size = count_flags(str, flags);
-	return (size);
-}
-
-int	ft_printf(const char *str, ...)
-{
-	int		num_args;
-	va_list	args;
-	int		count;
-
-	num_args = check_size(str);
-	va_start(args, str);
-	count = print_all(args, str, num_args);
-	va_end(args);
-	return (count);
+	len = 0;
+	if (nb >= 16)
+		len += ft_hexa(nb / 16, sign);
+	if (nb % 16 < 10)
+		len += ft_putchar((nb % 16) + 48);
+	else
+	{
+		if (sign == 1)
+			len += ft_putchar((nb % 16) + 87);
+		else
+			len += ft_putchar((nb % 16) + 55);
+	}
+	return (len);
 }

@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   utils_str.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 08:18:10 by acostin           #+#    #+#             */
-/*   Updated: 2022/12/14 08:22:04 by acostin          ###   ########.fr       */
+/*   Created: 2022/12/14 08:17:49 by acostin           #+#    #+#             */
+/*   Updated: 2022/12/14 08:19:13 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incs/ft_printf.h"
+#include "../../incs/ft_printf.h"
 
-static int	check_size(const char *str)
+int	ft_putstr(char *s)
 {
-	int		size;
-	char	*flags;
+	int	i;
 
-	size = 0;
-	flags = "cspdiuxX%";
-	size = count_flags(str, flags);
-	return (size);
-}
-
-int	ft_printf(const char *str, ...)
-{
-	int		num_args;
-	va_list	args;
-	int		count;
-
-	num_args = check_size(str);
-	va_start(args, str);
-	count = print_all(args, str, num_args);
-	va_end(args);
-	return (count);
+	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
 }

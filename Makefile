@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/12/14 08:18:05 by acostin           #+#    #+#              #
+#    Updated: 2022/12/14 08:18:08 by acostin          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # Variables
 NAME = libftprintf.a
 CC = cc
@@ -5,15 +17,21 @@ CFLAGS = -Wall -Wextra -Werror
 
 # path for srcs
 SRCS_DIR = ./srcs/
+SRCS_UTILS_DIR = ./srcs/utils/
 
 # path for header
 INCS_DIR = ./incs
 
 # Mandatory files
-FILES =        $(SRCS_DIR)ft_printf.c \
+FILES =		$(SRCS_DIR)ft_printf.c \
 			$(SRCS_DIR)print_all.c \
-			$(SRCS_DIR)utils1.c \
-			$(SRCS_DIR)utils2.c \
+			$(SRCS_DIR)count_flags.c \
+			$(SRCS_UTILS_DIR)utils_char.c \
+			$(SRCS_UTILS_DIR)utils_str.c \
+			$(SRCS_UTILS_DIR)utils_decimal.c \
+			$(SRCS_UTILS_DIR)utils_unsigned_int.c \
+			$(SRCS_UTILS_DIR)utils_hexa.c \
+			$(SRCS_UTILS_DIR)utils_pointer.c \
 
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)
