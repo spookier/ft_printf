@@ -14,6 +14,14 @@ static void print_arg(char c, va_list args, int *count)
 	}
 	else if(c == 'd' || c == 'i')
 		*count += ft_putnbr(va_arg(args, int));
+	else if (c == 'u')
+		*count += ft_unsigned_int(va_arg(args, unsigned int));
+	else if (c == 'x')
+		*count += ft_hexa(va_arg(args, unsigned int), 1);
+	else if (c == 'X')
+		*count += ft_hexa(va_arg(args, unsigned int), 0);
+	else if (c == '%')
+		*count += ft_putchar('%');
 	else
 		*count += ft_putchar(c);
 }

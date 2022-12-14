@@ -6,14 +6,14 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 09:54:18 by acostin           #+#    #+#              #
-#    Updated: 2022/12/09 20:08:18 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/14 01:07:23 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 # Variables
 NAME = libftprintf.a
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 
