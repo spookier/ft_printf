@@ -1,8 +1,0 @@
-.gitignore
-.vscode
-tester/
-a.out
-main.c
-libft.a
-libftprintf.a
-*.o
