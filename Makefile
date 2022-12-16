@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 08:18:05 by acostin           #+#    #+#              #
-#    Updated: 2022/12/14 08:18:08 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/16 21:51:19 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ FILES =		$(SRCS_DIR)ft_printf.c \
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)
 
-%.o : %.c
+.c.o:
 	$(CC) $(CFLAGS) -c -o $@ $< -I $(INCS_DIR)
 
 
@@ -54,5 +54,8 @@ clean :
 fclean : clean
 	rm -rf $(NAME)
 
+re : fclean
+	make all
 
-.PHONY : all clean fclean
+
+.PHONY : all clean fclean re
