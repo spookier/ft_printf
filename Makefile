@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 08:18:05 by acostin           #+#    #+#              #
-#    Updated: 2022/12/16 21:57:46 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/17 00:26:20 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,8 @@ clean :
 fclean : clean
 	rm -rf $(NAME)
 
+
+#Fclean then build all
 re : fclean
 	make all
 
