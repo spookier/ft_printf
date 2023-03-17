@@ -1,7 +1,7 @@
 
 # ft_printf
 
-ft_printf is a custom implementation of the standard printf function in C.
+ft_printf is a custom implementation of the standard printf function in C
 
 The function allows you to format and print text to the console or to a file, just like the standard printf function
 
@@ -39,6 +39,5 @@ This will print the following output to the console:
 ```
 Hello, world! The answer is 42.
 ```
-cspdiuxX%
 
 The function supports a wide range of format specifiers, including %c, %s, %p, %d, %i, %u, %x, and %X
