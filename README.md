@@ -1,9 +1,22 @@
 
 # ft_printf
 
-ft_printf is a custom implementation of the standard printf function in C
+ft_printf is a project that involves recoding the standard printf function in C programming language
 
-The function allows you to format and print text to the console or to a file, just like the standard printf function
+The function takes a format string as its first argument, followed by optional arguments that will be inserted into the format string at the corresponding format specifiers.
+
+
+The ft_printf function must support the following format specifiers:
+
+- %c: character
+- %s: string
+- %p: pointer
+- %d: signed integer
+- %i: signed integer
+- %u: unsigned integer
+- %x: hexadecimal integer (lowercase)
+- %X: hexadecimal integer (uppercase)
+- %%: percentage sign
 
 
 ## Installation
